@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block pagetitle %} Idea Backlog {% endblock %}
+{% block maincontent %}
+{% if ideas %}
+{% for idea in ideas %}
+<article>
+<header><h1><a href="/{{idea.name}}">{{idea.title}}</a></h1></header>
+<section>
+{{idea.text}}
+</section>
+<footer>
+{{idea.last_modified}}
+<nav>
+<ul>
+<li><a class="btn edit" href="/{{idea.name}}.edit">edit</a></li>
+<li><a class="btn remove" href="/{{idea.name}}.delete">delete</a></li>
+</ul>
+</nav>
+</footer>
+</article>
+{% endfor %}
+{% else %}
+<p>
+Your Backlog is still empty at the moment.<br>
+Add an idea for you project, by filling in the form below.
+</p>
+{% endif %}
+
+<article class="newentry">
+<form method="post">
+<header>
+  <h1>Add a new Idea</h1>
+  <input type="text" placeholder="set a Title" name="title"/>
+</header>
+
+<section>
+<textarea cols="60" rows="10" placeholder="describe the idea..." name="text">
+</textarea>
+</section>
+<footer>
+
+<nav>
+<ul>
+<li><button type="submit" class="btn" >
+<img src="/static/img/ok.png" width="24"/></button></li>
+<li><button type="reset" class="btn cancel" >
+<img src="/static/img/cancel.png" width="24"/></button></li>
+</ul>
+</nav>
+</footer>
+</form>
+</article>
+{% endblock %}

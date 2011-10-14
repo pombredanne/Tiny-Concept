@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<title>Tiny Concept</title>
+<style>
+.btn_new, .btn_remove, .btn_edit{
+	height: 24px;
+	opacity: .8;
+}
+.btn_new:hover, .btn_remove:hover, .btn_edit:hover{
+	opacity: 1;
+	box-shadow:8px 8px 8px #666;
+}
+.btn_new{
+	content: url("add_new.png");
+}
+.btn_edit{
+	content: url("edit.png");
+}
+.btn_remove{
+	content: url("remove.png");
+}
+</style>
+</head>
+
+<body>
+<header>
+<h1>Tiny Concept</h1>
+<nav>
+<ul>
+<li><a class="btn_new" href="#">add new</a></li>
+</ul>
+</nav>
+</header>
+
+<article>
+<header><h1>Bla</h1></header>
+<section>
+<p>
+This is a text, describling 'Bla'.
+</p>
+</section>
+<footer>
+Last modified 1 hour ago.
+<nav>
+<ul>
+<li><a class="btn_edit" href="#">edit</a></li>
+<li><a class="btn_remove" href="#">remove</a></li>
+</ul>
+</nav>
+</footer>
+</article>
+
+<article>
+<header><h1>Blubb</h1></header>
+<section>
+<p>
+Blubb is yust like Bla, only more bubbery.
+</p>
+</section>
+<footer>
+Last modified 1 hour ago.
+<nav>
+<ul>
+<li><a class="btn_edit" href="#">edit</a></li>
+<li><a class="btn_remove" href="#">remove</a></li>
+</ul>
+</nav>
+</footer>
+</article>
+
+<footer>
+<nav>
+<ul>
+<li><a class="btn_new" href="#">add new</a></li>
+</ul>
+</nav>
+</footer>
+</body>
+</html>

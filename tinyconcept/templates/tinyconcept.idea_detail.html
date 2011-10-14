@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block pagetitle %} Idea: {{idea.title}} {% endblock %}
+{% block maincontent %}
+<article>
+<header><h1>{{idea.title}}</h1></header>
+<section>
+{{idea.text}}
+</section>
+<footer>
+{{idea.last_modified}}
+<nav>
+<ul>
+<li><a class="btn edit" href="/{{idea.name}}.edit">edit</a></li>
+<li><a class="btn remove" href="/{{idea.name}}.delete">delete</a></li>
+<li><a class="btn home" href="/">home</a></li>
+</ul>
+</nav>
+</footer>
+</article>
+{% endblock %}

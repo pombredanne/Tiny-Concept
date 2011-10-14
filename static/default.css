@@ -1,0 +1,73 @@
+body {
+	background-color: #9DA6AB;
+	background: url("/static/img/linen.png");
+	
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+body>header {
+	/*background-color: rgba(0, 0, 0, .5);*/
+	text-align: center;
+	color: #222;
+	padding-bottom: 5px;
+
+}
+body>header h1 {
+	font: 70px Tahoma, Helvetica, Arial, Sans-Serif;
+	text-shadow: 0px 2px 3px #000;
+	margin-bottom: 0px;
+}
+body>header>h2 {
+	margin: .3em;
+	color: #222;
+	font: 40px Tahoma, Helvetica, Arial, Sans-Serif;
+	text-shadow:0px 1px 2px #ddd, 0 -1px 0 #000;
+}
+
+h1 a {
+	color: #222;
+	font: 20px Tahoma, Helvetica, Arial, Sans-Serif;
+	text-decoration: none;
+}
+
+h1 a:hover {
+	text-shadow: 0px 2px 3px #000;
+}
+
+.btn{
+	height: 24px;
+	opacity: .8;
+}
+button {
+	border: 0;
+	background: rgba(0, 0, 0, 0);
+}
+.btn:hover{
+	opacity: 1;
+	/*box-shadow:8px 8px 8px #666;*/
+}
+.new{
+	content: url("/static/img/add_new.png");
+}
+.edit{
+	content: url("/static/img/edit.png");
+}
+.remove{
+	content: url("/static/img/remove.png");
+}
+.ok{
+	content: url("/static/img/ok.png");
+}
+.cancel{
+	content: url("/static/img/cancel.png");
+}
+article nav {
+	float: right;
+}
+article.newentry nav {
+	float: none;
+}
+nav li{
+	display: inline;
+}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block pagetitle %} Idea Backlog {% endblock %}
+{% block maincontent %}
+<article class="newentry">
+<form method="post">
+<header>
+{% if idea %}
+  <h1>Edit {{idea.title}}</h1>
+{% else %}
+  <h1>Add a new Idea</h1>
+{% endif %}
+  <input type="text" placeholder="set a Title" name="title" {% if idea and idea.title %}value="{{idea.title}}"{% endif %}/>
+</header>
+
+<section>
+{%if idea and idea.name %}
+<input type="hidden" name="name" value="{{idea.name}}"/>
+{% endif %}
+<textarea cols="60" rows="10" placeholder="describe the idea..." name="text">{%if idea and idea.text %}
+{{idea.text}}
+{% endif %}</textarea>
+</section>
+<footer>
+
+<nav>
+<ul>
+<li><button type="submit" class="btn" >
+<img src="/static/img/ok.png" width="24"/></button></li>
+<li><button type="reset" class="btn cancel" >
+<img src="/static/img/cancel.png" width="24"/></button></li>
+</ul>
+</nav>
+</footer>
+</form>
+</article>
+{% endblock %}
